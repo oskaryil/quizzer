@@ -1,0 +1,34 @@
+[
+  {
+    "question": "Which fruit is this?",
+    "type": "imageQuestion",
+    "options": {
+      "a": {
+        "value": "Apple"
+      },
+      "b": {
+        "value": "Pear"
+      },
+      "c": {
+        "value": "Banana"
+      },
+      "correctOption": "a"
+    }
+  },
+  {
+    "question": "Which fruit is this?",
+    "type": "imageQuestion",
+    "options": {
+      "a": {
+        "value": "Apple"
+      },
+      "b": {
+        "value": "Banana"
+      },
+      "c": {
+        "value": "Orange"
+      },
+      "correctOption": "a"
+    }
+  }
+]
