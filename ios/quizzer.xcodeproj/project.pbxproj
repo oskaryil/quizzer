@@ -62,6 +62,7 @@
 		73BE62B64431E85A96180A04 /* Pods-quizzerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzerTests.debug.xcconfig"; path = "Target Support Files/Pods-quizzerTests/Pods-quizzerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		751F516F7DE4EE9380E0766B /* libPods-quizzer-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-quizzer-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		759C3689234A01F100FCA5F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		759C368B234A631B00FCA5F7 /* quizzer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = quizzer.entitlements; path = quizzer/quizzer.entitlements; sourceTree = "<group>"; };
 		8E8CCA486C19675DA15ED742 /* Pods-quizzer-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzer-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-quizzer-tvOSTests/Pods-quizzer-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		9CCE319D620CDA8DD1D59A94 /* libPods-quizzer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-quizzer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE48996C0ADBAEA9FDFE3D6 /* Pods-quizzer-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzer-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-quizzer-tvOS/Pods-quizzer-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 		13B07FAE1A68108700A75B9A /* quizzer */ = {
 			isa = PBXGroup;
 			children = (
+				759C368B234A631B00FCA5F7 /* quizzer.entitlements */,
 				759C3689234A01F100FCA5F7 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -164,7 +166,6 @@
 				73BE62B64431E85A96180A04 /* Pods-quizzerTests.debug.xcconfig */,
 				3D65C5008451520BE328745E /* Pods-quizzerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -299,6 +300,14 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = FUSW9H2DW6;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -664,6 +673,7 @@
 			baseConfigurationReference = 26291627503CD515868FA3A1 /* Pods-quizzer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = quizzer/quizzer.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = FUSW9H2DW6;
@@ -685,6 +695,7 @@
 			baseConfigurationReference = E8531C9125A4BCB36B6685D7 /* Pods-quizzer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = quizzer/quizzer.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FUSW9H2DW6;
 				INFOPLIST_FILE = quizzer/Info.plist;
