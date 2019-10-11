@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Text,
   ActivityIndicator,
+  Button,
 } from 'react-native'
 import firestore from '@react-native-firebase/firestore'
 
@@ -62,6 +63,7 @@ class PracticePickLevelScreen extends Component {
           )}
           keyExtractor={item => item.id.toString()}
         />
+        <Button onPress={() => navigation.goBack()} title="Go back" />
       </SafeAreaView>
     )
   }
