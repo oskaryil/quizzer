@@ -13,7 +13,7 @@ class App extends Component {
   async componentDidMount() {
     const {status} = await permissions.checkNotifications()
     if (status === 'denied') {
-      await permissions.requestNotifications(['alert', 'badge'])
+      await permissions.requestNotifications(['sound', 'badge'])
     }
     await this.getToken()
   }
