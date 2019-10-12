@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 import messaging from '@react-native-firebase/messaging'
 import permissions from 'react-native-permissions'
@@ -11,15 +11,19 @@ const API_BASE_URL = config.API_BASE_URL
 
 class App extends Component {
   async componentDidMount() {
-    const {status} = await permissions.checkNotifications()
+    const { status } = await permissions.checkNotifications()
     if (status === 'denied') {
       await permissions.requestNotifications(['sound', 'badge'])
     }
     await this.getToken()
   }
   async getToken() {
-    const token = await messaging().getToken()
-    await axios.post(`${API_BASE_URL}/push/token`, {token})
+    try {
+      const token = await messaging().getToken()
+      await axios.post(`${API_BASE_URL}/push/token`, { token })
+    } catch (err) {
+      console.log(err)
+    }
   }
   render() {
     return <AppNavigator />
