@@ -16,7 +16,7 @@
     "react": "16.9.0",
     "react-native": "0.61.2",
     "react-native-config": "git+https://github.com/luggit/react-native-config.git",
-    "react-native-fast-image": "^7.0.2",
+    "react-native-fast-image": "^8.3.0",
     "react-native-gesture-handler": "^1.4.1",
     "react-native-permissions": "^2.0.2",
     "react-navigation": "^4.0.10",
